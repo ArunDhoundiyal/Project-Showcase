@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import FetchProjectData from './components/FetchProjectData'
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const categoriesList = [
+  {id: 'ALL', displayText: 'All'},
+  {id: 'STATIC', displayText: 'Static'},
+  {id: 'RESPONSIVE', displayText: 'Responsive'},
+  {id: 'DYNAMIC', displayText: 'Dynamic'},
+  {id: 'REACT', displayText: 'React'},
+]
 
-export default App;
+const App = () => <FetchProjectData categoriesList={categoriesList} />
+
+export default App
